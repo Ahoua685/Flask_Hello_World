@@ -26,8 +26,8 @@ def carre(val_user):
 #    result= valeur1 + valeur2
 #    return f"<h2>La somme de votre valeur est:  </h2> {result}"
 @app.route('/somme/<int:valeur1>/<int:valeur2>')
-def somme(valeur1,valeur2):
-    result= valeur1 + valeur2
+def somme(valeur1, valeur2):
+    result = valeur1 + valeur2
     if result % 2 == 0:
         parite = "pair"
     else:
