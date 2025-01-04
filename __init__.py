@@ -21,10 +21,18 @@ def MaPremiereAPI():
 def carre(val_user):
     return "<h2>Le carré de votre valeur est : </h2>" + str(val_user * val_user)
 
+#@app.route('/somme/<int:valeur1>/<int:valeur2>')
+#def somme(valeur1,valeur2):
+#    result= valeur1 + valeur2
+#    return f"<h2>La somme de votre valeur est:  </h2> {result}"
 @app.route('/somme/<int:valeur1>/<int:valeur2>')
 def somme(valeur1,valeur2):
     result= valeur1 + valeur2
-    return f"<h2>La somme de votre valeur est:  </h2> {result}"
+    if result % 2==0:
+        parite = "pair"
+        else:
+        parite = "impair" 
+     return f"<h2>La somme de votre valeur est: {result} et elle est {parite}.</h2>"      
 
 if __name__ == "__main__":
   app.run(debug=True)
