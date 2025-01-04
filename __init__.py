@@ -38,9 +38,16 @@ def somme(valeur1, valeur2):
 def index():
     if request.method == 'POST': 
         valeurs = request.form.getlist('valeurs')
-        somme = sum(int(valeur) for valeur in valeurs if valeur.isdigit())
+        valeurs_entiers = [int(valeur) for valeur in valeurs if valeur.isdigit()]
+        somme = sum(valeurs_entiers)
+        valeur_max = max(valeurs_entiers)if valeurs_entiers else None
         parite = "pair" if somme % 2 == 0 else "impair" 
-    return f"<h2>La somme de vos valeurs est: {somme} et elle est {parite}.</h2>"          
+    reponse = f"<h2>La somme de vos valeurs est: {somme} et elle est {parite}.</h2>"
+    if valeurs_max is not None:
+        reponse += f"<h3>La valeur maximale saisie est: {valeur_max}.</h3>"
+    else:
+        reponse += "<h3>Aucune valeur valide saisie.</h3>"
+    return reponse         
 
 if __name__ == "__main__":
   app.run(debug=True)
