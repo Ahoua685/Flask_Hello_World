@@ -34,16 +34,15 @@ def somme(valeur1, valeur2):
         parite = "impair" 
     return f"<h2>La somme de vos valeurs est: {result} et elle est {parite}.</h2>"
 
-@app.route('/' ,methods=['GET', 'POST'])
-def index():
-    if request.method == 'POST': 
-        valeurs = request.form.getlist('valeurs')
-        valeurs_entiers = [int(valeur) for valeur in valeurs if valeur.isdigit()]
+@app.route('/')
+def index(): 
+        valeurs = request.args.get('valeurs', '')
+        valeurs_entiers = [int(valeur) for valeur in valeurs.split(',') if valeur.strip().isdigit()]
         somme = sum(valeurs_entiers)
         valeur_max = max(valeurs_entiers)if valeurs_entiers else None
         parite = "pair" if somme % 2 == 0 else "impair" 
     reponse = f"<h2>La somme de vos valeurs est: {somme} et elle est {parite}.</h2>"
-    if valeurs_max is not None:
+    if valeur_max is not None:
         reponse += f"<h3>La valeur maximale saisie est: {valeur_max}.</h3>"
     else:
         reponse += "<h3>Aucune valeur valide saisie.</h3>"
