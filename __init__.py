@@ -32,7 +32,15 @@ def somme(valeur1, valeur2):
         parite = "pair"
     else:
         parite = "impair" 
-    return f"<h2>La somme de vos valeurs est: {result} et elle est {parite}.</h2>"      
+    return f"<h2>La somme de vos valeurs est: {result} et elle est {parite}.</h2>"
+
+@app.route('/' ,methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST': 
+        valeurs = request.form.getlist('valeurs')
+        somme = sum(int(valeur) for valeur in valeurs if valeur.isdigit())
+        parite = "pair" if somme % 2 == 0 else "impair" 
+    return f"<h2>La somme de vos valeurs est: {somme} et elle est {parite}.</h2>"          
 
 if __name__ == "__main__":
   app.run(debug=True)
