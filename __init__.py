@@ -32,7 +32,7 @@ def somme(valeur1, valeur2):
         parite = "pair"
     else:
         parite = "impair" 
-     return f"<h2>La somme de vos valeurs est: {result} et elle est {parite}.</h2>"      
+    return f"<h2>La somme de vos valeurs est: {result} et elle est {parite}.</h2>"      
 
 if __name__ == "__main__":
   app.run(debug=True)
