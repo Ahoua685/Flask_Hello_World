@@ -34,19 +34,17 @@ def somme(valeur1, valeur2):
         parite = "impair" 
     return f"<h2>La somme de vos valeurs est: {result} et elle est {parite}.</h2>"
 
-@app.route('/')
-def index(): 
-        valeurs = request.args.get('valeurs', '')
-        valeurs_entiers = [int(valeur) for valeur in valeurs.split(',') if valeur.strip().isdigit()]
-        somme = sum(valeurs_entiers)
-        valeur_max = max(valeurs_entiers)if valeurs_entiers else None
-        parite = "pair" if somme % 2 == 0 else "impair" 
-    reponse = f"<h2>La somme de vos valeurs est: {somme} et elle est {parite}.</h2>"
-    if valeur_max is not None:
-        reponse += f"<h3>La valeur maximale saisie est: {valeur_max}.</h3>"
-    else:
-        reponse += "<h3>Aucune valeur valide saisie.</h3>"
-    return reponse         
+@app.route('/somme_toutes/<values>')
+def somme_toutes(values): 
+        valeurs = map(int, values.split(','))
+        resultat = sum(valeurs)  
+    return f"<h2>La somme de toutes les valeurs est: {resultat} </h2>" 
 
+@app.route('/valeur_max/<values>')
+def valeur_max(values):
+    valeurs = map(int, values.split(','))
+    max_valeur = max(valeurs)
+    return f"<h2>La valeur maximale est: {max_valeur} </h2>"
+    
 if __name__ == "__main__":
   app.run(debug=True)
