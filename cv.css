@@ -1,0 +1,35 @@
+.page{
+    width: 780px;
+    margin:auto;
+    font-family: 'Source sans Pro', Calibri, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.photoinfo{
+    height: 250px;
+}
+
+.photo{
+    float: left;
+}
+
+.info{
+    float: right;
+}
+.section{
+    margin-bottom: 70px;
+    text-align: justify;
+}
+
+.sec-gauche{
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sec-droite{
+    margin-left: 150px;
+}
+
+
+
