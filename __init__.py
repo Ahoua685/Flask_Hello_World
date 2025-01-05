@@ -36,8 +36,8 @@ def somme(valeur1, valeur2):
 
 @app.route('/somme_toutes/<values>')
 def somme_toutes(values): 
-        valeurs = map(int, values.split(','))
-        resultat = sum(valeurs)  
+    valeurs = map(int, values.split(','))
+    resultat = sum(valeurs)  
     return f"<h2>La somme de toutes les valeurs est: </h2>{resultat}" 
 
 @app.route('/valeur_max/<values>')
