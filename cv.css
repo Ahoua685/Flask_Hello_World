@@ -30,6 +30,11 @@
 .sec-droite{
     margin-left: 150px;
 }
+h2{
+    font-size: 28px;
+    color: #3388BB;
+    border-bottom: 3px solid #3388DD;
+}
 
 
 
