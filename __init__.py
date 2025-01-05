@@ -38,13 +38,13 @@ def somme(valeur1, valeur2):
 def somme_toutes(values): 
         valeurs = map(int, values.split(','))
         resultat = sum(valeurs)  
-    return f"<h2>La somme de toutes les valeurs est: {resultat} </h2>" 
+    return f"<h2>La somme de toutes les valeurs est: </h2>{resultat}" 
 
 @app.route('/valeur_max/<values>')
 def valeur_max(values):
     valeurs = map(int, values.split(','))
     max_valeur = max(valeurs)
-    return f"<h2>La valeur maximale est: {max_valeur} </h2>"
-    
+    return f"<h2>La valeur maximale est: </h2>{max_valeur}"
+
 if __name__ == "__main__":
   app.run(debug=True)
