@@ -29,6 +29,7 @@
 
 .sec-droite{
     margin-left: 150px;
+    margin-top: 37px;
 }
 h2{
     font-size: 28px;
@@ -45,6 +46,10 @@ h2{
 .titre{
     font-weight: bold;
     font-size: 20px;
+}
+
+#forma-gauche p{
+    margin-bottom: 37px;
 }
 
 
