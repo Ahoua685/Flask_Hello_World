@@ -50,7 +50,7 @@ def valeur_max(values):
 def cv():
     return render_template('cv.html') #comm2
     
-@app.route('/page1/')
+@app.route('/page1')
 def page1():
     return render_template('page1.html') #comm2
 
