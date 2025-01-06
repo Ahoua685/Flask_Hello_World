@@ -45,6 +45,11 @@ def valeur_max(values):
     valeurs = map(int, values.split(','))
     max_valeur = max(valeurs)
     return f"<h2>La valeur maximale est: {max_valeur} </h2>"
+    
+@app.route('/cv/')
+def exercices():
+    return render_template('cv.html') #comm2
+
 
 if __name__ == "__main__":
   app.run(debug=True)
