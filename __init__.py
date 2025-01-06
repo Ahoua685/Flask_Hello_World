@@ -53,6 +53,9 @@ def cv():
 @app.route('/page1')
 def page1():
     return render_template('page1.html') #comm2
+@app.route('/actualite')
+def actualite():
+    return render_template('actualite.html') #comm2  
 
 
 if __name__ == "__main__":
