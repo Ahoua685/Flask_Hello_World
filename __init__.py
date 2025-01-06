@@ -46,7 +46,7 @@ def valeur_max(values):
     max_valeur = max(valeurs)
     return f"<h2>La valeur maximale est: {max_valeur} </h2>"
     
-@app.route('/cv/')
+@app.route('/cv')
 def cv():
     return render_template('cv.html') #comm2
 
