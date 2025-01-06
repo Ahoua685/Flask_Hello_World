@@ -51,7 +51,7 @@ def cv():
     return render_template('cv.html') #comm2
     
 @app.route('/page1.html/')
-def exercices():
+def page1():
     return render_template('page1.html') #comm2
 
 
