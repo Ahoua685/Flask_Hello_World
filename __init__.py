@@ -59,7 +59,9 @@ def actualite():
 @app.route('/outilsJS')
 def outilsJS():
     return render_template('outilsJS.html') #comm2        
-
+@app.route('/Biblo_Images')
+def Biblo_Images():
+    return render_template('Biblo_Images') 
 
 if __name__ == "__main__":
   app.run(debug=True)
