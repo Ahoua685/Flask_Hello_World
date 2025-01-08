@@ -57,7 +57,7 @@ def page1():
 def actualite():
     return render_template('actualite.html') #comm2
 @app.route('/outilsJS')
-def actualite():
+def outilsJS():
     return render_template('outilsJS.html') #comm2        
 
 
