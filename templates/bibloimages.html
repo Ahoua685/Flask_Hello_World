@@ -4,17 +4,25 @@
 <meta charset="UTF-8"/>
 <style>img{padding-top:1%;}</style>
 <script>
-function afficher(){
-var Res    
+function afficher(){  
 if(document.getElementById('choix1').checked){
 document.getElementById('mon_image1').style.display="Block";
 }
 else {document.getElementById('mon_image1').style.display="None";}
 
+if (document.getElementById('choix2').checked){
+document.getElementById('mon_image2').style.display = "block";    
+}
+else {
+document.getElementById('mon_image2').style.display = "none";
+}
 
-
-
-
+if (document.getElementById('choix3').checked) {
+document.getElementById('mon_image3').style.display = "block";
+} else {
+document.getElementById('mon_image3').style.display = "none";
+}
+ }
 
 
 </script>
