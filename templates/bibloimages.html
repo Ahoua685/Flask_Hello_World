@@ -5,15 +5,33 @@
 <style>img{padding-top:1%;}</style>
 <script>
 function afficher(){
-}</script>
+if(document.getElementById('choix1').checked){
+document.getElementById('mon_image1').style.display="Block";
+}
+else {document.getElementById('mon_image1').style.display="None";}
+
+function afficher(){
+if(document.getElementById('choix2').checked){
+document.getElementById('mon_image2').style.display="Block";
+}
+else {document.getElementById('mon_image2').style.display="None";}
+
+function afficher(){
+if(document.getElementById('choix3').checked){
+document.getElementById('mon_image3').style.display="Block";
+}
+else {document.getElementById('mon_image3').style.display="None";}  
+
+
+
+
+
+
+</script>
 </head>
 <body>
 <h1>Image (s) à afficher?</h1>
-<ol>
-    <li>Image 1</li>
-    <li>Image 2</li>
-    <li>Image 3</li>
-</ol>
+
 <hr/>
 <button onclick="affichage()">Afficher</button>
 <hr/>
