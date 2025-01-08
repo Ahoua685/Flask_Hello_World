@@ -56,9 +56,9 @@ def page1():
 @app.route('/actualite')
 def actualite():
     return render_template('actualite.html') #comm2
-@app.route('/Outils_js')
+@app.route('/Outilsjs')
 def actualite():
-    return render_template('Outils_js.html') #comm2        
+    return render_template('Outilsjs.html') #comm2        
 
 
 if __name__ == "__main__":
