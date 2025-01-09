@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="UTF-8"/>
 <style>img{padding-top:1%;}</style>
-<img src = "../static/Cutest_Koala.jpg (1313×1204).url" alt = "Cutest_Koala"/>
 <script>
 function afficher(){  
 if(document.getElementById('choix1').checked){
 document.getElementById('mon_image1').style.display="Block";
 }
-else {document.getElementById('mon_image1').style.display="None";}
+else {
+    document.getElementById('mon_image1').style.display="None";
+     }
 
 if (document.getElementById('choix2').checked){
 document.getElementById('mon_image2').style.display = "block";    
 }
 else {
 document.getElementById('mon_image2').style.display = "none";
-}
+     }
 
 if (document.getElementById('choix3').checked) {
 document.getElementById('mon_image3').style.display = "block";
-} else {
+} 
+else {
 document.getElementById('mon_image3').style.display = "none";
-}
+     }
 
  }
 
@@ -33,10 +35,37 @@ document.getElementById('mon_image3').style.display = "none";
 <h1>Image (s) à afficher?</h1>
 
 <hr/>
-<button onclick="affichage()">Afficher</button>
+<label>
+    <input type="checkbox" id="choix1" onclick="afficher()">Image 1 
+</label><br/>
+
+<label>
+    <input type="checkbox" id="choix2" onclick="afficher()">Image 2 
+</label><br/>
+
+<label>
+    <input type="checkbox" id="choix3" onclick="afficher()">Image 3 
+</label><br/>
+
+<hr/>
+
+<div id="mon_image1" style="display: none;">
+  <img src="https://www.autojm.fr/blog/wp-content/uploads/2023/02/Kia-Sorento-768x384.jpg" alt="Image 1">
+
+</div>
+<div id="mon_image2" style="display: none;">
+    <img src="https://www.josera.fr/media/magefan_blog/cat-3048851_1920_2.jpg" alt="Image 2">
+</div>
+
+<div id="mon_image3" style="display: none;">
+    <img src="https://www.meme-helene.com/wp-content/uploads/2014/05/gateau-fraises-1024x1024.jpg" alt="Image 3">
+</div> 
+
 <hr/>
 
 
 
 
+
 </body>
+</html>
