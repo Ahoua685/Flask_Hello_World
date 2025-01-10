@@ -4,24 +4,25 @@
 <script>
 
 function afficher(){
-	
-	var saisie = parseInt(document.getElementById('V1').value);
-	var resultat = "";	
-		
-	for (j=0; j<saisie ; j++){
 
-                for (i=0; i<j+1 ; i++){
-                        resultat += "+"; 
-                }
-                
-                for (k=0; k<saisie-j ; k++){
-                        resultat +="*";
-                }  
-        resultat += "</br>"; 
+    var saisie = parseInt(document.getElementById('V1').value);
+    var resultat = "";
+
+    for (j=0; j<saisie ; j++){
+
+
+        for (i=0; i<j+1; i++){
+                resultat += "+"; 
 
         }
-	
-	document.getElementById('result').innerHTML = resultat;
+        for(k=0; k<saisie-j; k++){
+            resultat += "*";
+
+        }
+        resultat += "</br>";
+        }
+
+    document.getElementById('result').innerHTML = resultat;
 
 }
 
@@ -34,4 +35,5 @@ function afficher(){
 <button onclick="afficher()">Afficher</button>
 <div id="result"></div>
 </body>
-</html> 
+</html>
+
