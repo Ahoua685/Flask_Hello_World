@@ -62,7 +62,7 @@ def outilsJS():
 @app.route('/bibloimages')
 def bibloimages():
     return render_template('bibloimages.html') 
-@app.route('/Carre_Etoiles') 
+@app.route('/Carre_Etoile') 
 def carre_etoiles():
     return render_template('Carre_Etoiles.html')   
 
