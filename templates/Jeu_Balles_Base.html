@@ -10,28 +10,27 @@ h1{position:absolute;top:-7px; left:320px; z-index:2;}
 
 <script>
 //var globale
-var ball2X = 885;
-var ball2Y = 200;
+var ball1X = 885;
+var ball1Y = 200;
 var speed = 500;
 
 function principale(){
 	//Ajout d'un écouteur sur les touches
 	window.addEventListener('keydown', deplacement, true);
-	var ball1X = parseInt(document.getElementById('ball1').getAttribute("cx"));
+	
 	//Lance la fonction bouger() à interval de "speed"
 	enemy = setInterval(bouger, speed);
 	
 }
 
 function bouger(){
-	var ycible = parseInt(document.getElementById('ball').getAttribute("cy"));
-        var xcible = parseInt(document.getElementById('ball').getAttribute("cx"));
-
-if (ball1Y > ycible){ball1Y -=15;}
-else if (ball1Y < ycible){ball1Y +=15;}
-
-ball1X -= 15;
-if(ball1X<15){ball1X=15; 
+	var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
+        var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
+	var ball1X = parseInt(document.getElementById('ball1').getAttribute("cy"));
+	ballx-=15;
+	if(ballX<15){ballX=15;}
+	document.getElementById('ball').setAttribute("cx", ballX);
+	
   //clearInterval(enemy); 
   alert('You Win!!'); 
   speed -=100; 
