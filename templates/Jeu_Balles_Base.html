@@ -10,8 +10,7 @@ h1{position:absolute;top:-7px; left:320px; z-index:2;}
 
 <script>
 //var globale
-var ball1X = 885;
-var ball1Y = 200;
+
 var speed = 500;
 
 function principale(){
@@ -31,17 +30,8 @@ function bouger(){
 	if(ballX<15){ballX=15;}
 	document.getElementById('ball').setAttribute("cx", ballX);
 	
-  //clearInterval(enemy); 
-  alert('You Win!!'); 
-  speed -=100; 
-  ball1X = 885;
-  ball1Y = 200;}
 
-if((ball1X>(xcible-15) && ball1X<(xcible+15)) && (ball1Y>(ycible-15) && ball1Y<(ycible+15))){clearInterval(enemy); alert('You Loose!!');}
 
-document.getElementById('ball1').setAttribute("cx", ball1X);
-document.getElementById('ball1').setAttribute("cy", ball1Y);
-	
 	
 		
 
