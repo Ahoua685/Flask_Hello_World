@@ -35,10 +35,10 @@ function bouger(){
   ball2X = 885;
   ball2Y = 200;}
 
-if((ball2X>(xcible-15) && ball2X<(xcible+15)) && (ball2Y>(ycible-15) && ball2Y<(ycible+15))){clearInterval(enemy); alert('You Loose!!');}
+if((ball1X>(ballX-15) && ball1X<(ballX+15)) && (ball1Y>(ballY-15) && ball1Y<(ballY+15))){clearInterval(enemy); alert('You Loose!!');}
 
-document.getElementById('ball2').setAttribute("cx", ball2X);
-document.getElementById('ball2').setAttribute("cy", ball2Y);	      
+document.getElementById('ball1').setAttribute("cx", ball1X);
+document.getElementById('ball1').setAttribute("cy", ball1Y);	      
 	
 	
 		
