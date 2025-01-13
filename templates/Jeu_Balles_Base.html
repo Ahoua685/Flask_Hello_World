@@ -22,6 +22,8 @@ function principale(){
 
 function bouger(){
 	 var ballX = parseInt(document.getElementById('ball1').getAttribute("cx"));
+	 var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
+	 var ballY = parseInt(document.getElementById('ball1').getAttribute("cy"));
 			ballX -= 15;
                     	if(ballX<15){ballX=15;}
 			document.getElementById('ball1').setAttribute("cx", ballX);
@@ -29,9 +31,11 @@ function bouger(){
 		
 
 	//Code à créer pour faire bouger la boule enemy
-	                ballY += 15;
-			if(ballY>385){ballY=385;}
-			document.getElementById('ball1').setAttribute("cy", ballY);
+	                if(ballY<ball1Y){ball1-=15}
+	                if(ballY>ball1Y){ball1+=15}
+
+
+	                
 			
 	
 	          
