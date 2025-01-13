@@ -28,6 +28,15 @@ function bouger(){
 		
 
 	//Code à créer pour faire bouger la boule enemy
+	         ballY += 15;
+			if(ballY>385){ballY=385;}
+			document.getElementById('ball1').setAttribute("cy", ballY);
+			break;
+	         ballY-= 15;
+			if(ballY<15){ballY=15;}
+			document.getElementById('ball1').setAttribute("cy", ballY);
+			break;
+	
 	
 	
 }
