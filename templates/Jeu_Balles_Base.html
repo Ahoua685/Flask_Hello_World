@@ -55,7 +55,10 @@ function deplacement(evt) {
 
 
 		// Bas 
-                case 40:
+                case 40:ballY += 15;
+			if(ballY>385){ballY=385;}
+			document.getElementById('ball').setAttribute("cy", ballY);
+			break
 
 
             }
