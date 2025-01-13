@@ -28,7 +28,11 @@ function bouger(){
 		
 
 	//Code à créer pour faire bouger la boule enemy
-	         
+	          ballX -= 15;
+                    	if(ballX<15){ballX=15;}
+			document.getElementById('ball').setAttribute("cx", ballX);
+			break;
+		        document.getElementById('ball1').setAttribute("cx", ballX);
 			
 	
 	
@@ -46,6 +50,8 @@ function deplacement(evt) {
                     	if(ballX<15){ballX=15;}
 			document.getElementById('ball').setAttribute("cx", ballX);
 			break;
+		        
+			   
                 // Droite 
                 case 39:
 			ballX += 15;
@@ -61,9 +67,7 @@ function deplacement(evt) {
 			document.getElementById('ball').setAttribute("cy", ballY);
 			break;
 			   
-			   ballY-= 15;
-			if(ballY<15){ballY=15;}
-			document.getElementById('ball1').setAttribute("cy", ballY);
+			   
 			
 
 
