@@ -25,11 +25,12 @@ function principale(){
 function bouger(){
 	var ballX = parseInt(document.getElementById('ball1').getAttribute("cx"));
         var ballY = parseInt(document.getElementById('ball1').getAttribute("cy"));
-	var ball1X = parseInt(document.getElementById('ball').getAttribute("cy"));
+	var ball1Y = parseInt(document.getElementById('ball').getAttribute("cy"));
 	ballX-=15;
 	if(ballX<15){ballX=15;}
 	document.getElementById('ball1').setAttribute("cx", ballX);
-	
+	if(ballY<ball1Y){ball+=15;}
+	document.getElementById('ball1').setAttribute("cy", ballY);
 
 
 	
