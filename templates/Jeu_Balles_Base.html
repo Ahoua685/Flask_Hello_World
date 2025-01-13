@@ -10,35 +10,38 @@ h1{position:absolute;top:-7px; left:320px; z-index:2;}
 
 <script>
 //var globale
+var ball2X = 885;
+var ball2Y = 200;
 var speed = 500;
 
 function principale(){
 	//Ajout d'un écouteur sur les touches
 	window.addEventListener('keydown', deplacement, true);
+	var ball1X = parseInt(document.getElementById('ball1').getAttribute("cx"));
 	//Lance la fonction bouger() à interval de "speed"
 	enemy = setInterval(bouger, speed);
 	
 }
 
 function bouger(){
-	var ballX = parseInt(document.getElementById('ball').getAttribute("cy"));
-	var ballY = parseInt(document.getElementById('ball').setAttribute("cy", ballY));
+	var ycible = parseInt(document.getElementById('ball').getAttribute("cy"));
+        var xcible = parseInt(document.getElementById('ball').getAttribute("cx"));
 
-        if (ball1Y > ballY){ball1Y -=15;}
-        else if (ball1Y < ballY){ball1Y +=15;}
+if (ball1Y > ycible){ball1Y -=15;}
+else if (ball1Y < ycible){ball1Y +=15;}
 
-        ball1X -= 15;
-	if(ball1X<15){ball1X=15;
-	//clearInterval(enemy); 
+ball1X -= 15;
+if(ball1X<15){ball1X=15; 
+  //clearInterval(enemy); 
   alert('You Win!!'); 
   speed -=100; 
-  ball2X = 885;
-  ball2Y = 200;}
+  ball1X = 885;
+  ball1Y = 200;}
 
-if((ball1X>(ballX-15) && ball1X<(ballX+15)) && (ball1Y>(ballY-15) && ball1Y<(ballY+15))){clearInterval(enemy); alert('You Loose!!');}
+if((ball1X>(xcible-15) && ball1X<(xcible+15)) && (ball1Y>(ycible-15) && ball1Y<(ycible+15))){clearInterval(enemy); alert('You Loose!!');}
 
 document.getElementById('ball1').setAttribute("cx", ball1X);
-document.getElementById('ball1').setAttribute("cy", ball1Y);	      
+document.getElementById('ball1').setAttribute("cy", ball1Y);
 	
 	
 		
