@@ -21,19 +21,20 @@ function principale(){
 }
 
 function bouger(){
-	 var ballX = parseInt(document.getElementById('ball1').getAttribute("cx"));
-	 var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
-	 var ballY = parseInt(document.getElementById('ball1').getAttribute("cy"));
-			ballX -= 15;
-                    	if(ballX<15){ballX=15;}
-			document.getElementById('ball1').setAttribute("cx", ballX);
+	var ycible = parseInt(document.getElementById('ball').getAttribute("cy"));
+        var xcible = parseInt(document.getElementById('ball').getAttribute("cx"));
+
+        if (ball2Y > ycible){ball2Y -=15;}
+        else if (ball1Y < ycible){ball1Y +=15;}
+
+        ball2X -= 15;
+	if(ball1X<15){ball1X=15;
+	
 	
 		
 
 	//Code à créer pour faire bouger la boule enemy
-	                if(ballY<ball1Y){ball1-=15}
-	                if(ballY>ball1Y){ball1+=15}
-
+	                
 
 	                
 			
