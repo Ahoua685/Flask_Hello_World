@@ -67,7 +67,7 @@ def Carre_Etoiles():
     return render_template('Carre_Etoiles.html')
 @app.route('/Jeu_Balles_Base')
 def Jeu_Balles_Base()
-return render_template('Jeu_Balles_Base.html')
+    return render_template('Jeu_Balles_Base.html')
 
    
 
