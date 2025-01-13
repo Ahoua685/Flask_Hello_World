@@ -63,8 +63,13 @@ def outilsJS():
 def bibloimages():
     return render_template('bibloimages.html') 
 @app.route('/Carre_Etoile') 
-def carre_etoiles():
-    return render_template('Carre_Etoiles.html')   
+def Carre_Etoiles():
+    return render_template('Carre_Etoiles.html')
+@app.route('/Jeu_Balles_Base')
+def Jeu_Balles_Base()
+return render_template('Jeu_Balles_Base.html')
+
+   
 
 if __name__ == "__main__":
   app.run(debug=True)
