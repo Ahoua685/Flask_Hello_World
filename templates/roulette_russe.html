@@ -3,12 +3,13 @@
 <script>
 function lancer(){
 	var numeroaleatoire = Math.floor(Math.random() * 6) + 1;
-          alert("le numéro aléatoire est:" + numeroaleatoire);
-	if (document.getElementById("Br" + numeroaleatoire).style.fill== "red") {
-		  alert("Perdu");
+          
+
+	if (document.getElementById("Br" + numeroaleatoire).style.fill == "red") {
+		  alert("Perdu" + numeroaleatoire);
 	} 
 	else {
-		  alert("Gagné")
+		  alert("Gagné" + numeroaleatoire);
 	})	  
 }
 
