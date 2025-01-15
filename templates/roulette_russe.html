@@ -35,9 +35,19 @@ function lancer(){
 		  alert("Perdu" + numeroaleatoire);
 	} 
 	else {
-		  alert("Gagné" + numeroaleatoire);
+		var gains = 0;
+		if (ballesplacees===1) {
+			gains = 10000;
+		}else if(ballesplacees ===2){
+			gains = 100000;
+		}else if (ballesplacees ===3){
+			gains = 1000000;
+		}
+		}
+		  alert("Bravo, vous avez gagné " + gains + "€");
 	}	  
-}
+
+
 
 
 
