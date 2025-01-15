@@ -6,6 +6,13 @@ function lancer(){
 }
 
 function afficherchambre(numero){
+	var chambres = document.querySelectorAll('circle[id^="Br"]');
+	chambres.forEach(function(chambre){
+		chambre.setAttribute("fill", "gray");
+	});
+	var chambreclique = document.getElementById("Br" +numero);
+	chambreclique.setAttribute("fill", "red");
+	
 	      alert("Vous avez cliqué sur la chambre numéro" +numero);
 }
 </script>
