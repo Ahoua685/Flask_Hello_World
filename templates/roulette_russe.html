@@ -1,22 +1,25 @@
 </html>
 <head>
 <script>
-	function afficherchambre(numero){
-		document.getElementById("Br"+numero).style.fill="red";
-	}
+
+function afficherchambre(numero){
+	
+	document.getElementById("Br" +numero).style.fill="red";
+		      
+}	
 function lancer(){
-	var numeroaleatoire = Math.floor(Math.random() * 6) + 1;
+	var numeroaleatoire = Math.floor((Math.random() * 6) + 1);
+	alert(numeroaleatoire);
 	
           
 
 	if (document.getElementById("Br" + (numeroaleatoire-1)).style.fill == "red") {
-		  alert("Perdu" + numeroaleatoire);
+		  alert("Perdu");
 	} 
 	else {
-		  alert("Gagné" + numeroaleatoire);
+		  alert("Gagné");
 	}	  
 }
-
 
 
 </script>
