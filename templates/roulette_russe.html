@@ -1,6 +1,9 @@
 </html>
 <head>
 <script>
+	function afficherchambre(numero){
+		document.getElementById("Br"+numero).style.fill="red";
+	}
 function lancer(){
 	var numeroaleatoire = Math.floor(Math.random() * 6) + 1;
 	
@@ -14,15 +17,8 @@ function lancer(){
 	}	  
 }
 
-function afficherchambre(numero){
-	
-	var chambreclique = document.getElementById("Br" +numero);
-	chambreclique.setAttribute("fill", "red");
 
-	alert("Vous avez cliqué sur la chambre numéro" + numero);
 
-	      
-}
 </script>
 
 
