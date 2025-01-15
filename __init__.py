@@ -68,6 +68,10 @@ def Carre_Etoiles():
 @app.route('/Jeu_Balles_Base')
 def Jeu_Balles_Base():
     return render_template('Jeu_Balles_Base.html')
+  @app.route('/roulette_russe')
+def roulette_russe():
+  return render_template('roulette_russe')
+  
 
    
 
